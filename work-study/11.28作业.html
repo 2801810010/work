@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1、判断一个整数是偶数还是奇数。
+        // for (;;) {
+        //     var num1 = prompt('请输入一个数字');
+
+        //     if (num1 % 2 == 0) {
+        //         alert('偶数');
+        //         break;
+        //     } else if (num1 % 2 != 0 && num1 * 1 == num1) {
+        //         alert('奇数');
+        //         break;
+        //     } else {
+        //         alert('请输入一个有效的数字');
+        //     }
+        // }
+        //2、 判断一个年份是闰年还是平年；闰年：能被 4 整除，但不能被 100 整除的年份，或者能被 400 整除的年份
+        // for (;;) {
+        //     var year = prompt('input');
+        //     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        //         alert('该年是闰年');
+        //         break;
+        //     } else if (year % 4 != 0 && year * 1 == year) {
+        //         alert('该年是平年')
+        //         break;
+        //     } else {
+        //         alert('请输入一个正确的年份')
+        //     }
+        // }
+        //3、 判断一个人的年龄是否满 18 岁
+        // for (;;) {
+        //     var age = prompt('请输入你的年龄');
+        //     if (age >= 18) {
+        //         alert('你已经成年了');
+        //         break;
+        //     } else if (age < 18 && age > 0) {
+        //         alert('你还未成年');
+        //         break;
+        //     } else {
+        //         alert('请输入有效的年龄')
+        //     }
+        // }
+        // 4、 输入一个整数，如果此数为 0 ，则输出“石头”，如果此数为 1，则输出“剪刀”，如果此数为 2，则输出“布”，如果为其他则输出“错误”
+        // var res = prompt('输入一个数字');
+        // if (res == 0) {
+        //     alert('石头');
+        // } else if (res == 1) {
+        //     alert('剪刀');
+        // } else if (res == 2) {
+        //     alert('布');
+        // } else {
+        //     alert('错误');
+        // }
+        // 5、 输入a、b两个数如果b>a则将b给a为了a一直大于等于b
+        // var a = prompt('输入数字1');
+        // var b = prompt('输入数字2');
+        // if (b > a) {
+        //     a = b;
+        // }
+        // alert('a 为：' + a + ',' + 'b 为：' + b);
+        // 6、从大到小排序a、b、c三个整数
+        // var a = prompt('请输入第一个数字');
+        // var b = prompt('请输入第二个数字');
+        // var c = prompt('请输入第三个数字');
+        // var arr = [a, b, c];
+        // for (var i = 0; i < 2; i++) {
+        //     for (var j = 0; j < 2; j++) {
+        //         if (arr[j] < arr[j + 1]) {
+        //             var max = arr[j + 1];
+        //             arr[j + 1] = arr[j];
+        //             arr[j] = max;
+        //         }
+        //     }
+        // }
+        // document.write(arr[0] + '>' + arr[1] + '>' + arr[2]);
+        // 7、 根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者
+        // var height = prompt('请输入你的身高');
+        // var weight = prompt('请输入你的体重');
+        // var res = (height - 108) * 2;
+        // if (weight - res <= 10 || weight - res >= -10) {
+        //     alert('体重合格');
+        // } else {
+        //     alert('体重不合格');
+        // }
+        // 8、输入数字，显示星期几
+        // var num2 = prompt('输入一个 1 ~ 7 以内的数字');
+        // var week = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
+        // if (num2 >= 1 && num2 <= 7) {
+        //     alert('你输入的是' + week[num2 - 1]);
+        // } else {
+        //     alert('请输入一个 1~7 之间的数字');
+        // }
+        // 9、大家都知道，男大当婚，女大当嫁。那么女方家长要嫁女儿，当然要提出一定的条件：
+        // 高：180cm以上; 富:1000万以上; 帅:500以上;
+        // 如果这三个条件同时满足，则:‘我一定要嫁给他’
+        // 如果三个条件有为真的情况，则:‘嫁吧，比上不足，比下有余。’如果三个条件都不满足，则:‘不嫁！’
+        // var tall = prompt('身高：');
+        // var dep = prompt('存款：');
+        // var face = prompt('颜值：' + '(输入数字)')
+        // if (tall >= 180 && dep >= 10000000 && face >= 500) {
+        //     alert('一定嫁');
+        // } else if (tall >= 180 || dep >= 10000000 || face >= 500) {
+        //     alert('考虑一下');
+        // } else {
+        //     alert('嫌弃');
+        // }
+        // 东方航空从北京飞往马尔代夫的机票原价为4000元，4到10月份为旺季， 其他月份为淡季，旺季时候头等舱打9折，经济舱打7.5折；淡季头等舱打6折， 经济舱打3折。从页面输入出行的月份和选择的舱型计算出机票价格
+        // for (var i = 1; i <= 12; i++) {
+        //     if (i >= 4 && i <= 10) {
+        //         for (var j = 1; j <= 7; j++) {
+        //             for (var k = 1; k <= 7; k++) {
+        //                 console.log(i + '月的头等舱价格为：' + 4000 * 0.9 + '经济舱价格为：' + 4000 * 0.6);
+        //                 break;
+        //             }
+        //             break;
+        //         }
+        //     } else {
+        //         for (var m = 1; m <= 5; m++) {
+        //             for (var n = 1; n <= 5; n++) {
+        //                 console.log(i + '月的头等舱价格为：' + 4000 * 0.6 + '经济舱价格为：' + 4000 * 0.3);
+        //                 break;
+        //             }
+        //             break;
+        //         }
+        //     }
+        // }
+        // var month = prompt('请输入出行的月份');
+
+        // if (month >= 4 && month <= 10) {
+        //     var site = prompt('请输入你选择的舱位');
+        //     if (site == '头等舱') {
+        //         document.write(month + '月的头等舱价格为：' + 4000 * 0.9 + '经济舱价格为：' + 4000 * 0.6)
+        //     } else if (site == '经济舱') {
+        //         document.write(month + '月的头等舱价格为：' + 4000 * 0.6 + '经济舱价格为：' + 4000 * 0.3)
+        //     } else {
+        //         alert('请输入你选择的舱位');
+        //     }
+        // } else if (month >= 1 && month < 4 || month >= 10 && month <= 12) {
+        //     var site = prompt('请输入你选择的舱位');
+        //     if (site == '头等舱') {
+        //         document.write(month + '月的头等舱价格为：' + 4000 * 0.9 + '经济舱价格为：' + 4000 * 0.6)
+        //     } else if (site == '经济舱') {
+        //         document.write(month + '月的头等舱价格为：' + 4000 * 0.6 + '经济舱价格为：' + 4000 * 0.3)
+        //     } else {
+        //         alert('请输入你选择的舱位');
+        //     }
+        // } else {
+        //     alert('请输入有效的月份');
+        // }
+    </script>
+</body>
+
+</html>

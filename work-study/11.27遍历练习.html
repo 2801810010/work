@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var student = [{
+                name: 'xieke',
+                age: 32
+            }, {
+                name: 'luotao',
+                age: 21
+            }, {
+                name: 'wangyiming',
+                age: 33
+            }]
+            // 获取所有 name 属性的值
+            // 将所有 age 属性后 name 都加一个 "而已"
+            // 字符
+            // var s = [{} {} {}]
+        for (var i = 0; i < student.length; i++) {
+            // console.log(i);
+            for (var k in student[i]) {
+                console.log(student[i]['name']);
+                // console.log(student[i]['age']);
+                student[i].age = student[i].age + '而已';
+                console.log(student[i]['age']);
+                break;
+                // console.log(k);
+            }
+        }
+        // for (var x in student) {
+        //     var age = student[x].age
+        //     console.log(age);
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+       1、 100 以内所有 质数
+       2、 100以内所有奇数 和 偶数的个数
+       3、 100以内能被 3 整除的数字
+     -->
+    <script>
+        //  1、 100 以内所有 质数
+        var str = [];
+        var a = 0;
+        for (var m = 2; m <= 100; m++) {
+            var flag = true;
+            for (var n = 2; n < m; n++) {
+                if (m % n == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                a++;
+                str.push(m);
+            }
+        }
+        console.log(str);
+        console.log('100以内所有质数有：' + a + '个');
+        // 2、 100以内所有奇数 和 偶数的个数
+        var even = [];
+        var add = [];
+        for (var k = 1; k <= 100; k++) {
+            if (k % 2 == 0) {
+                even.push(k);
+            } else {
+                add.push(k);
+            }
+        }
+        console.log(even);
+        console.log('100以内所有偶数有：' + even.length + '个');
+        console.log(add);
+        console.log('100以内所有奇数有：' + add.length + '个');
+        //  3、 100以内能被 3 整除的数字
+        var num = [];
+        for (var j = 1; j <= 100; j++) {
+            if (j % 3 == 0) {
+                num.push(j)
+            }
+        }
+        console.log(num);
+        console.log('100以内能被3整除的数字有：' + num.length + '个');
+    </script>
+</body>
+
+</html>
